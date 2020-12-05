@@ -1,11 +1,11 @@
 <?php 
 session_start();
 
-$bdd = new PDO('mysql:host=localhost;dbname=discussion;charset=utf8', 'root', 'root');
+$bdd = new PDO('mysql:host=localhost;dbname=discussion;charset=utf8', 'root', '');
 
 if (!$_SESSION['conect']) 
 {
-	//header('location:index.php');
+	header('location:index.php');
 }
 
 if (isset($_POST['forminscription'])) 
@@ -14,8 +14,7 @@ if (isset($_POST['forminscription']))
 	{
 		$id_utilisateur = $_SESSION['id'];
 		$text = htmlspecialchars($_POST['text']);
-		//var_dump($_SESSION);
-		//var_dump($_POST['text']);
+		
 		// User connecté en insertion dans la base de données du message!
 		if ($text <= 1000) 
 		{

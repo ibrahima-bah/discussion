@@ -3,7 +3,7 @@
 session_start();
 
 
-$bdd = new PDO('mysql:host=localhost;dbname=discussion;charset=utf8', 'root', 'root');
+$bdd = new PDO('mysql:host=localhost;dbname=discussion;charset=utf8', 'root', '');
 
 if (isset($_SESSION['id'])) 
 {
